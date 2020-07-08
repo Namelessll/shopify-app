@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/auth/instagram/connect', 'Main\InstagramController@instagramConnectRoute')->name('instagramConnectRoute');
 Route::get('auth/instagram/callback','Main\InstagramController@instagramCallbackRoute')->name('instagramCallbackRoute');
 
+
 Route::get('/', 'Main\ShopifyController@getMainPage')->name('getMainPage');

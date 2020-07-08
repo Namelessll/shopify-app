@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        'https://swc-sotbify-store.myshopify.com/*'
     ];
 }

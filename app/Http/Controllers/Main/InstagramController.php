@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Main;
 
 use App\Http\Controllers\Controller;
 use App\Models\InstagramModel;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -20,6 +21,10 @@ class InstagramController extends Controller
         self::$clientId = config('app.instagram_client_id');
         self::$clientSecretKey = config('app.instagram_secret_key');
         self::$authRedirect = config('app.instagram_auth_redirect');
+    }
+
+    public static function getClientSecretKey() {
+        return self::$clientSecretKey;
     }
 
     public function instagramConnectRoute() {
